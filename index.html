@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Aravind Jaligapu — Model and Actor based in India. Open for fashion, commercial, and film collaborations."/>
+  <title>Aravind Jaligapu — Model & Actor</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <!-- Your Stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ════════════════════════════════
+       CUSTOM CURSOR (hidden on mobile)
+  ════════════════════════════════ -->
+  <div class="cursor"         id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ════════════════════════════════
+       SCROLL PROGRESS BAR (top strip)
+  ════════════════════════════════ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ════════════════════════════════
+       NAVBAR
+  ════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <a href="#home" class="nav-logo">MN<span>.</span></a>
+
+      <!-- Nav Links (hidden on mobile, shown via JS toggle) -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"       class="nav-link active">Home</a></li>
+        <li><a href="#about"      class="nav-link">About</a></li>
+        <li><a href="#portfolio"  class="nav-link">Portfolio</a></li>
+        <li><a href="#showreel"   class="nav-link">Showreel</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact"    class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Right side actions -->
+      <div class="nav-actions">
+        <a href="#" class="btn-download" id="downloadBtn">Download CV</a>
+        <!-- Hamburger (shown only on mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════
+       SECTION 1 · HERO
+  ════════════════════════════════ -->
+  <section class="hero" id="home">
+
+    <!-- Background image + dark gradient overlay -->
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Welcome to my world</p>
+
+      <h1 class="hero-name">
+        Aravindh<br>
+        <span>Jaligapu</span>       <!-- italic gold on second line -->
+      </h1>
+
+      <!-- Text typed by JS -->
+      <p class="hero-tagline" id="typingText"></p>
+
+      <div class="hero-actions">
+        <a href="#portfolio" class="btn-primary">View Portfolio</a>
+        <a href="#contact"   class="btn-outline">Get in Touch</a>
+      </div>
+    </div>
+
+    <!-- Animated scroll hint at bottom -->
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+
+  </section>
+
+  <!-- ════════════════════════════════
+       SECTION 2 · ABOUT
+  ════════════════════════════════ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Left: photo -->
+        <div class="about-image reveal">
+          <div class="about-img-frame">
+            <!--
+              REPLACE the src below with your actual photo.
+              Example: src="images/Aravind-about.jpg"
+            -->
+            <img src="https://picsum.photos/seed/Aravind-about/500/650" alt="Aravind Jaligapu"/>
+            <div class="about-img-accent"></div>
+          </div>
+        </div>
+
+        <!-- Right: text + details -->
+        <div class="about-content reveal">
+          <span class="section-eyebrow">About Me</span>
+          <h2 class="section-title">The Face<br>Behind the <em>Lens</em></h2>
+
+          <p class="about-bio">
+            I'm Aravind Jaligapu — a passionate model and aspiring actor from India with a drive
+            to tell stories through presence, expression, and movement. I bring energy,
+            discipline, and authenticity to every shoot and project.
+          </p>
+          <p class="about-bio" style="margin-top:1rem;">
+            Currently open for collaborations across fashion, commercial, and film projects.
+            Let's create something memorable together.
+          </p>
+
+          <!-- Quick-detail grid -->
+          <div class="about-details">
+            <div class="detail-item">
+              <span class="detail-label">Height</span>
+              <span class="detail-value">5′9″ /  175 cm</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Location</span>
+              <span class="detail-value">Pune, India 🇮🇳</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Languages</span>
+              <span class="detail-value">English, Hindi, Telugu</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Status</span>
+              <span class="detail-value available">Open for Work ✓</span>
+            </div>
+          </div>
+
+          <!-- Animated number counters -->
+          <div class="about-stats">
+            <div class="stat">
+              <div class="stat-num-wrap">
+                <span class="stat-num" data-target="50">0</span><span class="stat-plus">+</span>
+              </div>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat">
+              <div class="stat-num-wrap">
+                <span class="stat-num" data-target="3">0</span><span class="stat-plus">+</span>
+              </div>
+              <span class="stat-label">Years Exp.</span>
+            </div>
+            <div class="stat">
+              <div class="stat-num-wrap">
+                <span class="stat-num" data-target="15">0</span><span class="stat-plus">+</span>
+              </div>
+              <span class="stat-label">Brands</span>
+            </div>
+          </div>
+
+          <a href="#" class="btn-primary" style="margin-top:2.2rem; display:inline-block;">
+            Download Portfolio PDF
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       SECTION 3 · PORTFOLIO GALLERY
+  ════════════════════════════════ -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-eyebrow">My Work</span>
+        <h2 class="section-title">Portfolio <em>Gallery</em></h2>
+        <p class="section-subtitle">A curated selection of shoots, campaigns, and moments.</p>
+      </div>
+
+      <!-- Category filter buttons -->
+      <div class="portfolio-filter reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="fashion">Fashion</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+        <button class="filter-btn" data-filter="editorial">Editorial</button>
+      </div>
+
+      <!-- Image grid — add/remove items freely -->
+      <div class="portfolio-grid" id="portfolioGrid">
+
+        <!-- ITEM 1 -->
+        <div class="portfolio-item reveal" data-category="fashion">
+          <div class="portfolio-img-wrap">
+            <!-- REPLACE src with: src="images/shoot-1.jpg" -->
+            <img src="https://picsum.photos/seed/pf1/600/750" alt="Urban Edge Fashion Shoot" loading="lazy"/>
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <p class="portfolio-category">Fashion</p>
+                <h3 class="portfolio-name">Urban Edge</h3>
+                <!-- data-src = full-size image for lightbox -->
+                <button class="portfolio-zoom"
+                        data-src="https://picsum.photos/seed/pf1/1200/1500"
+                        data-title="Urban Edge — Fashion"
+                        aria-label="Open image">
+                  <!-- Expand icon -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="portfolio-item reveal" data-category="commercial">
+          <div class="portfolio-img-wrap">
+            <img src="https://picsum.photos/seed/pf2/600/750" alt="Brand Campaign" loading="lazy"/>
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <p class="portfolio-category">Commercial</p>
+                <h3 class="portfolio-name">Brand Campaign</h3>
+                <button class="portfolio-zoom"
+                        data-src="https://picsum.photos/seed/pf2/1200/1500"
+                        data-title="Brand Campaign — Commercial"
+                        aria-label="Open image">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="portfolio-item reveal" data-category="editorial">
+          <div class="portfolio-img-wrap">
+            <img src="https://picsum.photos/seed/pf3/600/750" alt="Midnight Stories Editorial" loading="lazy"/>
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <p class="portfolio-category">Editorial</p>
+                <h3 class="portfolio-name">Midnight Stories</h3>
+                <button class="portfolio-zoom"
+                        data-src="https://picsum.photos/seed/pf3/1200/1500"
+                        data-title="Midnight Stories — Editorial"
+                        aria-label="Open image">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="portfolio-item reveal" data-category="fashion">
+          <div class="portfolio-img-wrap">
+            <img src="https://picsum.photos/seed/pf4/600/750" alt="Golden Hour Fashion" loading="lazy"/>
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <p class="portfolio-category">Fashion</p>
+                <h3 class="portfolio-name">Golden Hour</h3>
+                <button class="portfolio-zoom"
+                        data-src="https://picsum.photos/seed/pf4/1200/1500"
+                        data-title="Golden Hour — Fashion"
+                        aria-label="Open image">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 5 -->
+        <div class="portfolio-item reveal" data-category="commercial">
+          <div class="portfolio-img-wrap">
+            <img src="https://picsum.photos/seed/pf5/600/750" alt="Product Promo Commercial" loading="lazy"/>
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <p class="portfolio-category">Commercial</p>
+                <h3 class="portfolio-name">Product Promo</h3>
+                <button class="portfolio-zoom"
+                        data-src="https://picsum.photos/seed/pf5/1200/1500"
+                        data-title="Product Promo — Commercial"
+                        aria-label="Open image">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 6 -->
+        <div class="portfolio-item reveal" data-category="editorial">
+          <div class="portfolio-img-wrap">
+            <img src="https://picsum.photos/seed/pf6/600/750" alt="Raw and Real Editorial" loading="lazy"/>
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <p class="portfolio-category">Editorial</p>
+                <h3 class="portfolio-name">Raw &amp; Real</h3>
+                <button class="portfolio-zoom"
+                        data-src="https://picsum.photos/seed/pf6/1200/1500"
+                        data-title="Raw & Real — Editorial"
+                        aria-label="Open image">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /portfolio-grid -->
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       LIGHTBOX (controlled by JS)
+  ════════════════════════════════ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous">&#8249;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Lightbox image"/>
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+    <button class="lightbox-nav next" id="lightboxNext" aria-label="Next">&#8250;</button>
+  </div>
+
+  <!-- ════════════════════════════════
+       SECTION 4 · SHOWREEL
+  ════════════════════════════════ -->
+  <section class="showreel section" id="showreel">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Watch</span>
+        <h2 class="section-title">Show <em>Reel</em></h2>
+        <p class="section-subtitle">A glimpse into my on-screen presence and acting range.</p>
+      </div>
+
+      <!-- 16:9 responsive video wrapper -->
+      <div class="video-wrap reveal">
+        <div class="video-frame">
+          <!--
+            REPLACE the YouTube video ID (currently dQw4w9WgXcQ) with your own.
+            Example: src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0"
+          -->
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
+            title="Aravind Jaligapu Showreel"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       SECTION 5 · EXPERIENCE
+  ════════════════════════════════ -->
+  <section class="experience section" id="experience">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Background</span>
+        <h2 class="section-title">Experience &amp;<br><em>Collaborations</em></h2>
+      </div>
+
+      <div class="experience-grid">
+
+        <div class="exp-card reveal">
+          <div class="exp-icon">📸</div>
+          <span class="exp-year">2024</span>
+          <h3 class="exp-title">Fashion Week – Mumbai</h3>
+          <p class="exp-desc">Walked the ramp for emerging Indian designers at Mumbai Fashion Week.</p>
+          <span class="exp-tag">Runway</span>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-icon">🎬</div>
+          <span class="exp-year">2023</span>
+          <h3 class="exp-title">Short Film — "Khwaab"</h3>
+          <p class="exp-desc">Lead role in an award-nominated Marathi short film exploring youth identity.</p>
+          <span class="exp-tag">Acting</span>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-icon">🏷️</div>
+          <span class="exp-year">2023</span>
+          <h3 class="exp-title">Brand Ambassador</h3>
+          <p class="exp-desc">Commercial face for a regional clothing brand across digital and print campaigns.</p>
+          <span class="exp-tag">Commercial</span>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-icon">📷</div>
+          <span class="exp-year">2022</span>
+          <h3 class="exp-title">Editorial Feature</h3>
+          <p class="exp-desc">Featured in an editorial spread on next-generation models from Maharashtra.</p>
+          <span class="exp-tag">Editorial</span>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-icon">🎭</div>
+          <span class="exp-year">2022</span>
+          <h3 class="exp-title">Theatre Production – Pune</h3>
+          <p class="exp-desc">Stage actor in a Pune theatre company's annual production, attended by 2,000+ people.</p>
+          <span class="exp-tag">Theatre</span>
+        </div>
+
+        <!-- Open for collaboration card -->
+        <div class="exp-card exp-card--open reveal">
+          <div class="exp-icon">✨</div>
+          <span class="exp-year">2025</span>
+          <h3 class="exp-title">Open for Collaborations</h3>
+          <p class="exp-desc">Available for fashion, commercial, film, OTT, and brand projects. Let's build something great.</p>
+          <a href="#contact" class="btn-primary" style="margin-top:1.4rem; display:inline-block; font-size:0.76rem; padding:0.7rem 1.4rem;">
+            Get in Touch
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       SECTION 6 · CONTACT
+  ════════════════════════════════ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Left: info -->
+        <div class="contact-info reveal">
+          <span class="section-eyebrow">Say Hello</span>
+          <h2 class="section-title">Let's Work<br><em>Together</em></h2>
+          <p class="contact-sub">
+            Have a project in mind? Whether it's a shoot, a film, or a brand campaign —
+            I'd love to hear from you.
+          </p>
+
+          <div class="contact-details">
+            <!-- REPLACE with your real email/phone/Instagram -->
+            <a href="mailto:Aravindjaligapu75@gmail.com" class="contact-item">
+              <span class="contact-icon">✉</span>
+              <span>Aravindjaligapu75@gmail.com</span>
+            </a>
+            <a href="tel:+919876543210" class="contact-item">
+              <span class="contact-icon">📞</span>
+              <span>+91 90100 37883</span>
+            </a>
+            <a href="https://instagram.com/aravind_urstruly" target="_blank" rel="noopener" class="contact-item">
+              <span class="contact-icon">📸</span>
+              <span>@AravindJaligapu</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm" novalidate>
+
+            <div class="form-group">
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" name="name" placeholder="Rahul Sharma" required/>
+              <span class="form-error" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="rahul@email.com" required/>
+              <span class="form-error" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Collaboration Proposal"/>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+
+            <button type="submit" class="btn-primary btn-submit">
+              <span class="btn-label">Send Message</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       TOAST NOTIFICATION (JS-driven)
+  ════════════════════════════════ -->
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+  <!-- ════════════════════════════════
+       FOOTER
+  ════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">MN<span>.</span></a>
+          <p class="footer-tagline">Model · Actor · Open for Work</p>
+        </div>
+
+        <!-- Quick nav -->
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#showreel">Showreel</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- Social icons -->
+        <div class="footer-social">
+
+          <!-- Instagram -->
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+
+          <!-- YouTube -->
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22 8s-.3-1.8-1-2.5c-.96-1-2.04-1-2.52-1.06C15.52 4.27 12 4.27 12 4.27s-3.52 0-6.48.17c-.48.06-1.56.06-2.52 1.06C2.3 6.2 2 8 2 8S1.75 10.04 1.75 12.08v1.84C1.75 15.96 2 18 2 18s.3 1.8 1 2.5c.96 1 2.22.97 2.78 1.06C7.8 21.8 12 21.73 12 21.73s3.52 0 6.48-.17c.48-.06 1.56-.06 2.52-1.06.7-.7 1-2.5 1-2.5s.25-2.04.25-4.08v-1.84C22.25 10.04 22 8 22 8z"/>
+              <polygon points="10,15 15,12 10,9" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+
+          <!-- X / Twitter -->
+          <a href="https://x.com" target="_blank" rel="noopener" class="social-link" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="3"/>
+              <path d="M7 10v8M7 7v.01M11 18v-5c0-1.1.9-2 2-2s2 .9 2 2v5M11 10v8"/>
+            </svg>
+          </a>
+
+        </div>
+      </div><!-- /footer-top -->
+
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Aravind Jaligapu. All rights reserved.</p>
+        <p>Crafted with passion in India 🇮🇳</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Your JavaScript (always at the end of body) -->
+  <script src="script.js"></script>
+
+</body>
+</html>
