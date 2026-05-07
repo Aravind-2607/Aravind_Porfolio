@@ -79,7 +79,7 @@ body {
   color: var(--off-white);
   line-height: 1.65;
   overflow-x: hidden;
-  cursor: auto;           /* switched to auto on mobile via media query */
+  cursor: none;           /* switched to auto on mobile via media query */
 }
 
 img {
@@ -1342,3 +1342,9 @@ button { font-family: var(--font-body); cursor: none; border: none; background: 
   .about-details  { grid-template-columns: 1fr; }
   .footer-bottom  { flex-direction: column; text-align: center; }
 }
+
+
+
+ /* ================================== New CSS File ======================================== */
+
+
